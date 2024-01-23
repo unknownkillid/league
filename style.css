@@ -235,14 +235,18 @@ body {
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(10px);
-  box-shadow: inset 0px 10px 30px black;
+  background-image: url(assets/section1/btnbg.gif);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: 500%;
+
 }
 
 .button:hover {
-  background-image: url(assets/section1/smoke.gif);
-  background-size: 200%;
-  background-position: center;
+  background-image: url(assets/section1/btnbg.gif);
+  background-position: center ;
   background-repeat: no-repeat;
+  background-size: 500%;
 }
 
 .acceptButton {
