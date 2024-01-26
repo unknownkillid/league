@@ -39,8 +39,8 @@ body {
 }
 
 .videoBg {
-  min-width: 100vw;
-  height: auto;
+  min-width: 100%;
+  height: 100vh;
   z-index: -1;
   object-fit: cover;
   align-items: center;
@@ -61,6 +61,7 @@ body {
   display: flex;
   gap: 20px;
   flex-direction: row;
+  width: auto;
 }
 
 .navbar-links a {
@@ -126,7 +127,6 @@ body {
 }
 
 .navbar-lang-and-loginBtn {
-  width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -149,7 +149,7 @@ body {
   width: 600px;
   height: 600px;
   background-color: rgba(0, 0, 0, 0.507);
-  border-radius: 100%;
+  border-radius: 1000px;
   border: 1px solid goldenrod;
   display: flex;
   align-items: center;
@@ -160,7 +160,7 @@ body {
   width: 500px;
   height: 500px;
   border: 2px solid goldenrod;
-  border-radius: 100%;
+  border-radius: 1000px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,6 +184,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 }
 
 .accept-button-container {
@@ -228,15 +229,15 @@ body {
   background-color: rgba(0, 0, 0, 0.623);
   border-bottom-left-radius: 60%;
   border-bottom-right-radius: 60%;
-  height: 48px;
-  width: 187px;
+  height: 51px;
+  width: 191px;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   background-image: url(assets/section1/btnbg.gif);
-  background-position: center ;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: 500%;
 
@@ -252,4 +253,17 @@ body {
 .acceptButton {
   color: white;
   text-decoration: none;
+}
+
+.blackTranspharent {
+  width: 100%;
+  height: 100%;
+  background-color: #10376383;
+  position: absolute;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
