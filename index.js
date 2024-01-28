@@ -3,27 +3,18 @@ const startContainer = document.getElementById('startContainer')
 const legendsNeverDie = new Audio();
 legendsNeverDie.src = './assets/section1/legends.mp3'
 
-startButton.addEventListener('click', () => {
-    startContainer.classList.add('startNone')
-    setTimeout(() => {
-        startContainer.style.display = 'none'
-        legendsNeverDie.play();
-        legendsNeverDie.loop = true;
-    }, 900);
-})
-
 const muteButton = document.getElementById('musicMute');
 let musicPlays = true;
 muteButton.addEventListener('click', () => {
-    if (musicPlays) {
-        legendsNeverDie.pause();
-        musicPlays = false;
-        muteButton.innerHTML = '<i class="fa-solid fa-play"></i>'
-    } else {
-        legendsNeverDie.play();
-        musicPlays = true;
-        muteButton.innerHTML = '<i class="fa-solid fa-pause"></i>'
-    }
+  if (musicPlays) {
+    legendsNeverDie.pause();
+    musicPlays = false;
+    muteButton.innerHTML = '<i class="fa-solid fa-play"></i>'
+  } else {
+    legendsNeverDie.play();
+    musicPlays = true;
+    muteButton.innerHTML = '<i class="fa-solid fa-pause"></i>'
+  }
 })
 
 const video = document.getElementById("scrollingVideo");
@@ -47,9 +38,44 @@ function animate() {
       document.documentElement.offsetHeight
     ) - window.innerHeight;
   if (!seeking && video.duration) {
-    console.log(window.scrollY, lim, video.duration);
     video.currentTime = video.duration * (window.scrollY / lim);
+
   }
   requestAnimationFrame(animate);
 }
 animate();
+
+const videoButtonBackGround = document.getElementById('videoBGButton')
+videoButtonBackGround.addEventListener('timeupdate', function () {
+  videoButtonBackGround.currentTime = 0.2
+});
+
+const videoBGButton = document.getElementById('interact')
+videoBGButton.addEventListener('mouseover', () => {
+  document.getElementById('videoButtonHover').style.opacity = 1
+
+})
+videoBGButton.addEventListener('mouseout', () => {
+  document.getElementById('videoButtonHover').style.opacity = 0
+})
+
+const cardInteraction = document.getElementById('cardInteraction')
+let cardClicked = false;
+const cardOutro = document.getElementById('cardOutro')
+const cardIntro = document.getElementById('cardIntro')
+const transCardBg = document.getElementById('transCardBg')
+
+cardInteraction.addEventListener('click', () => {
+
+  if (!cardClicked) {
+    cardIntro.play();
+    setTimeout(() => {
+      cardIntro.style.display = 'none'
+      cardIntro.play();
+      cardOutro.style.display = 'block'
+      cardOutro.play()
+      transCardBg.classList.add('cardBlock')
+    }, 2300);
+  }
+  cardClicked = true;
+})
