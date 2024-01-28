@@ -241,6 +241,7 @@ body {
 
 .stream-player {
   width: 1000px;
+  border-radius: 20px;
 }
 
 .cardInteraction {
@@ -256,6 +257,7 @@ body {
   background-color: rgba(0, 0, 0, 0.39);
   border-radius: 20px;
   display: none;
+  padding: 40px 0;
 }
 
 .cardBlock {
@@ -264,4 +266,19 @@ body {
 
 .cardLighting {
   height: 770px;
+}
+
+.schedule {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.teamicon {
+  width: 50px;
+}
+
+.schedule h2 {
+  color: white;
 }
