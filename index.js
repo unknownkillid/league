@@ -103,6 +103,5 @@ triggerContainer.addEventListener('mouseout', () => {
   champVideoTransition.load()
   comeOutBg.style.display = 'none'
   comeOutBg.classList.remove('aatroxDisplay')
-
 })
 
