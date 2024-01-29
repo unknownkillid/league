@@ -79,3 +79,30 @@ cardInteraction.addEventListener('click', () => {
   }
   cardClicked = true;
 })
+
+
+const triggerContainer = document.getElementById('triggerContainer')
+const champVideoTransition = document.getElementById('champCardVideo')
+const blackTransition = document.getElementById('blackTransition')
+const comeOutBg = document.getElementById('comeOutBg')
+
+triggerContainer.addEventListener('mouseover', () => {
+  champVideoTransition.play();
+  blackTransition.classList.add('bgdone')
+  setTimeout(() => {
+    comeOutBg.style.display = 'block'
+    setTimeout(() => {
+      comeOutBg.classList.add('aatroxDisplay')
+    }, 300);
+  }, 600);
+})
+
+triggerContainer.addEventListener('mouseout', () => {
+  blackTransition.classList.remove('bgdone')
+  champVideoTransition.currentTime = 0
+  champVideoTransition.load()
+  comeOutBg.style.display = 'none'
+  comeOutBg.classList.remove('aatroxDisplay')
+
+})
+

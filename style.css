@@ -137,7 +137,8 @@ body {
 .frame {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Adjust according to your needs */
+  object-fit: cover;
+  /* Adjust according to your needs */
   position: absolute;
 }
 
@@ -170,7 +171,7 @@ body {
 
 .league-main-logo {
   width: 100%;
-  
+
 }
 
 .registerButton-main {
@@ -385,4 +386,83 @@ body {
   flex-direction: row;
   gap: 10px;
   color: white;
+}
+
+.sectionFour {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.champ-lores {
+  width: 1200px;
+  height: 600px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.champ-card {
+  width: 270px;
+  height: 480px;
+  background-image: url(assets/champs/bloodmoon-aatrox-splash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.champ-trans-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.137);
+  position: absolute;
+  top: 0;
+}
+
+.aatroxUp {
+  width: 500px;
+  position: absolute;
+  opacity: 0;
+  transition: 0.7s;
+  z-index: 7;
+  display: none;
+}
+
+.video-trigger-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.185);
+  z-index: 9;
+  position: absolute;
+}
+
+.champ-hover-bg {
+  position: absolute;
+  bottom: 0;
+}
+
+.black-transition {
+  opacity: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.7s;
+}
+
+.bgdone {
+  opacity: 1;
+}
+
+.aatroxDisplay {
+  opacity: 1;
+  transform: translateY(-150px);
 }
