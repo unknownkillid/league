@@ -81,10 +81,8 @@ cardInteraction.addEventListener('click', () => {
 })
 
 
-// Assuming you have multiple card elements with the class 'champ-card'
 const cardElements = document.querySelectorAll('.champ-card');
 
-// Define the function for hover effects
 function addHoverEffects(triggerElement, videoTransition, blackTransition, comeOutBg) {
   let hoverTimeout;
   let displayTimeout;
@@ -116,7 +114,6 @@ function addHoverEffects(triggerElement, videoTransition, blackTransition, comeO
   });
 }
 
-// Apply the function to each card element
 cardElements.forEach((card) => {
   const triggerElement = card.querySelector('.video-trigger-container');
   const videoTransition = card.querySelector('.champ-hover-bg');

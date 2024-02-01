@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-@import url(fonts.css);
+@font-face {
+  font-family: 'BeaufortforLOL-BoldItalic';
+  src: url('Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Bold.otf');
+  font-weight: bold;
+  font-style: italic;
+}
 
 * {
   margin: 0;
@@ -10,6 +14,7 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  font-family: 'BeaufortforLOL-BoldItalic';
 }
 
 body {
@@ -396,6 +401,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-direction: column;
 }
 
 .champ-lores {
@@ -411,7 +417,7 @@ body {
 
 .champ-card {
   width: 270px;
-  height: 480px;
+  height: 487px;
   background-image: url(assets/champs/bloodmoon-aatrox-splash.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -518,4 +524,8 @@ body {
 
 .sectionTitle {
   color: white;
+}
+
+.cardZoom {
+  transform: scale(80%);
 }
