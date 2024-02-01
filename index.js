@@ -81,27 +81,47 @@ cardInteraction.addEventListener('click', () => {
 })
 
 
-const triggerContainer = document.getElementById('triggerContainer')
-const champVideoTransition = document.getElementById('champCardVideo')
-const blackTransition = document.getElementById('blackTransition')
-const comeOutBg = document.getElementById('comeOutBg')
+// Assuming you have multiple card elements with the class 'champ-card'
+const cardElements = document.querySelectorAll('.champ-card');
 
-triggerContainer.addEventListener('mouseover', () => {
-  champVideoTransition.play();
-  blackTransition.classList.add('bgdone')
-  setTimeout(() => {
-    comeOutBg.style.display = 'block'
-    setTimeout(() => {
-      comeOutBg.classList.add('aatroxDisplay')
-    }, 300);
-  }, 600);
-})
+// Define the function for hover effects
+function addHoverEffects(triggerElement, videoTransition, blackTransition, comeOutBg) {
+  let hoverTimeout;
+  let displayTimeout;
 
-triggerContainer.addEventListener('mouseout', () => {
-  blackTransition.classList.remove('bgdone')
-  champVideoTransition.currentTime = 0
-  champVideoTransition.load()
-  comeOutBg.style.display = 'none'
-  comeOutBg.classList.remove('aatroxDisplay')
-})
+  triggerElement.addEventListener('mouseover', () => {
+    clearTimeout(hoverTimeout);
+    clearTimeout(displayTimeout);
 
+    videoTransition.play();
+    blackTransition.classList.add('bgdone');
+
+    hoverTimeout = setTimeout(() => {
+      comeOutBg.style.display = 'block';
+      displayTimeout = setTimeout(() => {
+        comeOutBg.classList.add('aatroxDisplay');
+      }, 300);
+    }, 600);
+  });
+
+  triggerElement.addEventListener('mouseout', () => {
+    clearTimeout(hoverTimeout);
+    clearTimeout(displayTimeout);
+
+    blackTransition.classList.remove('bgdone');
+    videoTransition.currentTime = 0;
+    videoTransition.load();
+    comeOutBg.style.display = 'none';
+    comeOutBg.classList.remove('aatroxDisplay');
+  });
+}
+
+// Apply the function to each card element
+cardElements.forEach((card) => {
+  const triggerElement = card.querySelector('.video-trigger-container');
+  const videoTransition = card.querySelector('.champ-hover-bg');
+  const blackTransition = card.querySelector('.black-transition');
+  const comeOutBg = card.querySelector('.aatroxUp');
+
+  addHoverEffects(triggerElement, videoTransition, blackTransition, comeOutBg);
+});

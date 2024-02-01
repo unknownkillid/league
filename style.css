@@ -406,6 +406,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  gap: 50px;
 }
 
 .champ-card {
@@ -419,6 +420,22 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+.card2{
+  background-image: url(assets/champs/yone-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+.card3{
+  background-image: url(assets/champs/kayn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .champ-trans-bg {
@@ -436,6 +453,14 @@ body {
   transition: 1.3s;
   z-index: 7;
   display: none;
+}
+
+.yoneUp {
+  width: 430px;
+}
+
+.kaynup {
+  width: 800px;
 }
 
 .video-trigger-container {
