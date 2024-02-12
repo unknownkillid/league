@@ -570,3 +570,16 @@ body {
   color: goldenrod;
   cursor: url(../assets/section1/hand2.png), auto;
 }
+
+
+/* landing page responsives */
+
+@media screen and (max-width:890px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-lang-and-loginBtn {
+    display: none;
+  }
+}
