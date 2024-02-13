@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
     <div id="headerContainer"></div>
     
     <div class="login-form">
-        
+        <div class="background-login">
+            <video src="assets/login/background-animated.webm" autoplay muted loop class="login-bg"></video>
+        </div>
+
+        <form action="#" class="form-login">
+            <h1 class="loginh1">Login</h1>
+            <input type="text" id="username" class="loginputs" placeholder="Username">
+            <input type="password" id="passwd" class="loginputs" placeholder="Password">
+            <a href="#">Forgot Your Nickname or Password?</a>
+            <button class="loginBtn">Login</button>
+        </form>
     </div>
 
     <script src="js/login.js"></script>

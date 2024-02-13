@@ -572,6 +572,9 @@ body {
 }
 
 
+
+
+
 /* landing page responsives */
 
 @media screen and (max-width:890px) {
@@ -583,3 +586,5 @@ body {
     display: none;
   }
 }
+
+
