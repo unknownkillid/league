@@ -45,13 +45,3 @@ function previewProfilePicture(event) {
 
     reader.readAsDataURL(input.files[0]);
 }
-
-//return to home page 
-
-let returnButton = document.querySelectorAll('returnToHome')
-
-returnButton.forEach(returnBtn => {
-    returnBtn.addEventListener('click', () => {
-        
-    })
-})
