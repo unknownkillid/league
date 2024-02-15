@@ -38,10 +38,20 @@ function previewProfilePicture(event) {
 
     reader.onload = function(){
         var dataURL = reader.result;
-        var profilePicture = document.getElementById('profilePicture');
+        const profilePicture = document.getElementById('profilePicture');
         profilePicture.style.backgroundImage = "url('" + dataURL + "')";
         profilePicture.innerHTML = ''; 
     };
 
     reader.readAsDataURL(input.files[0]);
 }
+
+//return to home page 
+
+let returnButton = document.querySelectorAll('returnToHome')
+
+returnButton.forEach(returnBtn => {
+    returnBtn.addEventListener('click', () => {
+        
+    })
+})
