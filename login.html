@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,52 @@
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
 
-    <div id="headerContainer"></div>
-    
+
     <div class="login-form">
         <div class="background-login">
             <video src="assets/login/background-animated.webm" autoplay muted loop class="login-bg"></video>
         </div>
 
-        <form action="#" class="form-login">
+        <form action="#" class="form-login" id="loginForm">
             <h1 class="loginh1">Login</h1>
             <input type="text" id="username" class="loginputs" placeholder="Username">
             <input type="password" id="passwd" class="loginputs" placeholder="Password">
-            <a href="#">Forgot Your Nickname or Password?</a>
-            <button class="loginBtn">Login</button>
+            <a href="#" class="forgot">Forgot Your Nickname or Password?</a>
+            <div class="log-reg-buttons">
+                <button class="loginBtn">Login</button>
+                <button class="loginBtn" id="registerButton">Register</button>
+            </div>
+        </form>
+
+        <form action="" class="register" id="registerForm">
+            <h1 class="loginh1">Register</h1>
+            <div class="profile-picture-register">
+                <img src="assets/login/theme-16-border.png" class="borderProfile" alt="">
+                <div class="profile-picture-txt">Profile Picture</div>
+                <label for="file" class="fileLabel"></label>
+                <input type="file" id="file" accept="image/*">
+            </div>
+            <input type="text" id="usernameRegister" class="loginputs" placeholder="Username">
+            <input type="password" id="passwdRegister" class="loginputs" placeholder="Password">
+            <input type="password" id="passwdConfirm" class="loginputs" placeholder="Confirm Password">
+            <input type="email" class="loginputs" placeholder="Email">
+            <div class="checkbox-register">
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <label for="checkbox">I have read and agree <a href="#">Terms and Conditions</a></label>
+            </div>
+
+            <div class="register-buttons">
+                <button class="loginBtn" id="registrationButton">Register</button>
+                <button class="loginBtn" id="haveAcc">Already Have Account?</button>
+            </div>
+
         </form>
     </div>
 
     <script src="js/login.js"></script>
-    <script src="js/exportImport.js"></script>
 </body>
+
 </html>
