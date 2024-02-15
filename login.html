@@ -32,9 +32,9 @@
             <h1 class="loginh1">Register</h1>
             <div class="profile-picture-register">
                 <img src="assets/login/theme-16-border.png" class="borderProfile" alt="">
-                <div class="profile-picture-txt">Profile Picture</div>
+                <div class="profile-picture-txt" id="profilePicture">Profile Picture</div>
                 <label for="file" class="fileLabel"></label>
-                <input type="file" id="file" accept="image/*">
+                <input type="file" id="file" accept="image/*" onchange="previewProfilePicture(event)">
             </div>
             <input type="text" id="usernameRegister" class="loginputs" placeholder="Username">
             <input type="password" id="passwdRegister" class="loginputs" placeholder="Password">

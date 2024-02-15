@@ -31,3 +31,17 @@ haveAcc.addEventListener('click', () => {
         }, 200);
     }, 600);
 })
+
+function previewProfilePicture(event) {
+    var input = event.target;
+    var reader = new FileReader();
+
+    reader.onload = function(){
+        var dataURL = reader.result;
+        var profilePicture = document.getElementById('profilePicture');
+        profilePicture.style.backgroundImage = "url('" + dataURL + "')";
+        profilePicture.innerHTML = ''; 
+    };
+
+    reader.readAsDataURL(input.files[0]);
+}
