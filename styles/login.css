@@ -58,6 +58,7 @@
     width: 40%;
     height: 50px;
     padding: 15px;
+    outline: none;
 }
 
 .login-labels {
@@ -174,4 +175,8 @@ input[type='file'] {
     width: 50px;
     height: 50px;
     
+}
+
+.loginputs:focus {
+    border-bottom: 3px solid goldenrod;
 }
